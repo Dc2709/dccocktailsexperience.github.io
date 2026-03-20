@@ -1,36 +1,125 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>DC Cocktail Experience</title>
 
 <style>
 
 body{
-background:black;
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#0f0f0f;
 color:white;
-font-family:Arial;
 text-align:center;
-padding-top:100px;
+}
+
+section{
+padding:80px 20px;
 }
 
 h1{
-font-size:60px;
-letter-spacing:2px;
+font-size:48px;
+margin-bottom:10px;
+}
+
+h2{
+font-size:36px;
+margin-bottom:40px;
 }
 
 p{
-font-size:20px;
-color:#ccc;
+max-width:700px;
+margin:auto;
+line-height:1.6;
 }
 
-button{
-background:#c9a15d;
-color:black;
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
+url('images/cocktail.jpg');
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:56px;
+}
+
+.button{
+margin-top:30px;
 padding:15px 30px;
-border:none;
-font-size:18px;
-cursor:pointer;
+border-radius:30px;
+text-decoration:none;
+color:white;
+background:#d4af37;
+font-weight:bold;
+transition:0.3s;
+display:inline-block;
+}
+
+.button:hover{
+background:#b8962e;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+max-width:900px;
+margin:auto;
+}
+
+.service{
+background:#1c1c1c;
+padding:30px;
+border-radius:12px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+max-width:1000px;
+margin:auto;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+max-width:900px;
+margin:auto;
+}
+
+.feature{
+background:#1a1a1a;
+padding:25px;
+border-radius:12px;
+}
+
+.footer{
+background:#050505;
+padding:40px;
+font-size:14px;
+}
+
+.social a{
+color:#d4af37;
+text-decoration:none;
+font-weight:bold;
 }
 
 </style>
@@ -39,15 +128,145 @@ cursor:pointer;
 
 <body>
 
+<!-- HERO -->
+
+<section class="hero">
+
 <h1>DC Cocktail Experience</h1>
 
 <p>
-Experiencias premium de coctelería para eventos privados y corporativos
+Experiencias premium de coctelería para eventos privados y corporativos.
+</p>
+
+<a class="button" href="https://wa.me/593978961365" target="_blank">
+Reservar por WhatsApp
+</a>
+
+</section>
+
+<!-- SERVICIOS -->
+
+<section>
+
+<h2>Nuestras Experiencias</h2>
+
+<div class="services">
+
+<div class="service">
+<h3>Eventos Privados</h3>
+<p>Cócteles premium para celebraciones exclusivas.</p>
+</div>
+
+<div class="service">
+<h3>Eventos Corporativos</h3>
+<p>Servicio profesional para empresas y marcas.</p>
+</div>
+
+<div class="service">
+<h3>Barra de Mixología</h3>
+<p>Experiencias interactivas con bartenders profesionales.</p>
+</div>
+
+<div class="service">
+<h3>Coctelería Personalizada</h3>
+<p>Menús diseñados según el concepto de tu evento.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- GALERIA -->
+
+<section>
+
+<h2>Galería</h2>
+
+<div class="gallery">
+
+<img src="images/cocktail1.jpg">
+<img src="images/cocktail2.jpg">
+<img src="images/cocktail3.jpg">
+<img src="images/cocktail4.jpg">
+
+</div>
+
+</section>
+
+<!-- POR QUE ELEGIRNOS -->
+
+<section>
+
+<h2>¿Por qué elegir DC Cocktail Experience?</h2>
+
+<div class="features">
+
+<div class="feature">
+<h3>Ingredientes Premium</h3>
+<p>Utilizamos insumos de alta calidad para cada cóctel.</p>
+</div>
+
+<div class="feature">
+<h3>Bartenders Profesionales</h3>
+<p>Experiencia en hospitalidad y servicio de lujo.</p>
+</div>
+
+<div class="feature">
+<h3>Experiencias Personalizadas</h3>
+<p>Diseñamos cada barra según el evento.</p>
+</div>
+
+<div class="feature">
+<h3>Estética y Presentación</h3>
+<p>Coctelería visualmente impactante para tu evento.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- RESERVA -->
+
+<section>
+
+<h2>Reserva tu Experiencia</h2>
+
+<p>
+Contáctanos para diseñar una experiencia de coctelería única para tu evento.
 </p>
 
 <br>
 
-<button>Reservar experiencia</button>
+<a class="button" href="https://wa.me/593978961365" target="_blank">
+WhatsApp
+</a>
+
+<br><br>
+
+<a class="button" href="mailto:dccocktailexperience@gmail.com">
+Enviar Email
+</a>
+
+</section>
+
+<!-- FOOTER -->
+
+<section class="footer">
+
+<p>© 2026 DC Cocktail Experience</p>
+
+<div class="social">
+
+<p>
+Instagram:
+<a href="https://www.instagram.com/dccocktailexperience/" target="_blank">
+@dccocktailexperience
+</a>
+</p>
+
+</div>
+
+</section>
 
 </body>
 
