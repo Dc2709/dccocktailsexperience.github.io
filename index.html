@@ -2,8 +2,8 @@
 <html lang="es">
 
 <head>
-<meta charset="UTF-8">
-<title>DC Cocktail Experience</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Premium mobile cocktail bar for private and corporate events in Guayaquil.">
 
 <style>
 
@@ -38,16 +38,18 @@ nav a{
 margin:10px;
 }
 
-button{
+.button{
 padding:12px 28px;
 background:#d4af37;
-border:none;
 border-radius:6px;
-cursor:pointer;
 font-size:16px;
+text-decoration:none;
+color:black;
+display:inline-block;
+margin:10px;
 }
 
-button:hover{
+.button:hover{
 background:#b8962f;
 }
 
@@ -91,9 +93,7 @@ font-size:14px;
 
 <nav>
 
-<a href="menu.html">
-<button>Menú de Cócteles</button>
-</a>
+<a class="button" href="menu.html">Menú de Cócteles</a>
 
 <a href="#">
 <button>Servicios</button>
