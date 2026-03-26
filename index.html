@@ -2,7 +2,6 @@
 <html lang="es">
 
 <head>
-
 <meta charset="UTF-8">
 <title>DC Cocktail Experience</title>
 
@@ -10,117 +9,83 @@
 
 body{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#0f0f0f;
+font-family:Arial;
+background-color:#0f0f0f;
 color:white;
+text-align:center;
 }
 
-/* NAVBAR */
-
-.navbar{
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-justify-content:center;
-gap:40px;
-padding:20px;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(5px);
-z-index:10;
-}
-
-.navbar a{
-color:white;
-text-decoration:none;
-font-size:15px;
-letter-spacing:1px;
-}
-
-.navbar a:hover{
-color:#d4af37;
-}
-
-/* HERO */
+/* HEADER */
 
 header{
-height:100vh;
-background-image:url("images/hero.jpg");
-background-size:cover;
-background-position:center;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-position:relative;
+padding:60px 20px;
+background:#000;
 }
 
-/* DARK OVERLAY */
-
-header::before{
-content:"";
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.55);
-}
-
-/* HERO CONTENT */
-
-.hero{
-position:relative;
-z-index:2;
-}
-
-.hero h1{
-font-size:60px;
+h1{
+font-size:50px;
 letter-spacing:3px;
-margin-bottom:10px;
 }
 
-.hero h2{
-color:#d4af37;
-font-weight:300;
-margin-bottom:40px;
-}
-
-/* BOTONES HERO */
-
-.hero-buttons{
+nav{
+margin-top:30px;
 display:flex;
-gap:20px;
 justify-content:center;
-flex-wrap:wrap;
+gap:20px;
 }
 
-button{
-padding:14px 32px;
-border:none;
+nav a{
+text-decoration:none;
+}
+
+.nav-button{
+padding:12px 28px;
 background:#d4af37;
+border:none;
 border-radius:6px;
 cursor:pointer;
 font-size:16px;
-font-weight:bold;
+color:black;
 }
 
-button:hover{
+.nav-button:hover{
 background:#b8962f;
 }
 
-/* SECCIONES */
+/* INTRO */
 
-.section{
-padding:90px 20px;
-text-align:center;
+.intro{
+padding:60px 20px;
+font-size:20px;
+max-width:800px;
+margin:auto;
+line-height:1.6;
 }
 
-.section h2{
-color:#d4af37;
-margin-bottom:20px;
+/* GALERIA */
+
+.gallery{
+padding:60px 20px;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+max-width:1000px;
+margin:auto;
+}
+
+.gallery-grid img{
+width:100%;
+border-radius:10px;
 }
 
 /* SERVICIOS */
+
+.section{
+padding:80px 20px;
+}
 
 .services{
 display:flex;
@@ -135,33 +100,23 @@ background:#1a1a1a;
 padding:30px;
 border-radius:10px;
 width:260px;
-transition:0.3s;
-}
-
-.service:hover{
-transform:translateY(-5px);
-}
-
-/* SOCIAL */
-
-.social{
-margin-top:40px;
-}
-
-.social a{
-margin:0 10px;
-color:#d4af37;
-text-decoration:none;
-font-size:18px;
 }
 
 /* FOOTER */
 
 footer{
-background:black;
 padding:30px;
-text-align:center;
+background:#000;
 margin-top:40px;
+font-size:14px;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:20px;
+}
+
+footer img{
+width:24px;
 }
 
 </style>
@@ -170,156 +125,83 @@ margin-top:40px;
 
 <body>
 
-<!-- NAVBAR -->
-
-<div class="navbar">
-
-<a href="#">Inicio</a>
-
-<a href="menu.html">Menú</a>
-
-<a href="#servicios">Experiencias</a>
-
-<a href="https://www.instagram.com/dccocktailexperience/" target="_blank">Instagram</a>
-
-<a href="https://wa.me/593999981885" target="_blank">Reservar</a>
-
-</div>
-
-<!-- HERO -->
-
 <header>
-
-<div class="hero">
 
 <h1>DC Cocktail Experience</h1>
 
-<h2>Mobile Cocktail Bar | Private Events</h2>
-
-<div class="hero-buttons">
+<nav>
 
 <a href="menu.html">
-<button>Menú de Cócteles</button>
+<button class="nav-button">Menú</button>
 </a>
 
 <a href="#servicios">
-<button>Servicios</button>
+<button class="nav-button">Servicios</button>
 </a>
 
 <a href="https://wa.me/593999981885" target="_blank">
-<button>Reservar Evento</button>
+<button class="nav-button">Reservar</button>
 </a>
 
-</div>
-
-</div>
+</nav>
 
 </header>
 
-<!-- EXPERIENCIA -->
-
-<section class="section">
-
-<h2>Experiencias de Coctelería para Eventos</h2>
+<section class="intro">
 
 <p>
-
-DC Cocktail Experience ofrece servicio profesional de bar móvil
-para bodas, eventos privados y eventos corporativos.
+DC Cocktail Experience ofrece servicio profesional de bar móvil para bodas,
+eventos privados y eventos corporativos.
+<br><br>
 Creamos experiencias de mixología diseñadas para cada evento.
-
 </p>
 
 </section>
 
-<!-- SERVICIOS -->
+<section class="gallery">
 
-<section class="section" id="servicios">
+<div class="gallery-grid">
 
-<h2>Nuestros Servicios</h2>
+<img src="img/cocktail1.jpg">
+<img src="img/cocktail2.jpg">
+<img src="img/cocktail3.jpg">
+
+</div>
+
+</section>
+
+<section id="servicios" class="section">
+
+<h2 style="color:#d4af37;">Nuestros Servicios</h2>
 
 <div class="services">
 
 <div class="service">
-
 <h3>Eventos Privados</h3>
-
-<p>
-
-Cumpleaños, celebraciones y eventos exclusivos
-con cócteles personalizados.
-
-</p>
-
+<p>Cócteles personalizados para celebraciones exclusivas.</p>
 </div>
 
 <div class="service">
-
 <h3>Bodas</h3>
-
-<p>
-
-Bar móvil elegante y profesional
-para el día más importante.
-
-</p>
-
+<p>Bar móvil elegante para el día más importante.</p>
 </div>
 
 <div class="service">
-
 <h3>Eventos Corporativos</h3>
-
-<p>
-
-Experiencias de mixología para empresas
-y lanzamientos de marca.
-
-</p>
-
+<p>Experiencias de mixología para empresas y marcas.</p>
 </div>
 
 </div>
 
 </section>
-
-<!-- CONTACTO -->
-
-<section class="section">
-
-<h2>Reservas & Contacto</h2>
-
-<p>
-
-Agenda tu evento con DC Cocktail Experience.
-
-</p>
-
-<br>
-
-<a href="https://wa.me/593999981885" target="_blank">
-<button>Reservar por WhatsApp</button>
-</a>
-
-<div class="social">
-
-<a href="https://www.instagram.com/dccocktailexperience/" target="_blank">
-Instagram
-</a>
-
-</div>
-
-</section>
-
-<!-- FOOTER -->
 
 <footer>
 
-<p>
+<p>DC Cocktail Experience | Guayaquil</p>
 
-DC Cocktail Experience | Guayaquil
-
-</p>
+<a href="https://www.instagram.com/dccocktailexperience/" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+</a>
 
 </footer>
 
