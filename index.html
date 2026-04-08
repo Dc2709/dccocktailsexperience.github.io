@@ -155,16 +155,28 @@ gap:40px;
 margin-top:40px;
 }
 
+/* TARJETAS PREMIUM */
+
 .card{
-background:rgba(0,0,0,0.65);
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(8px);
 padding:45px;
-border:1px solid rgba(255,255,255,0.1);
-transition:0.4s;
+border:1px solid rgba(255,255,255,0.15);
+border-radius:10px;
+transition:all 0.5s ease;
+opacity:0;
+transform:translateY(40px);
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0);
 }
 
 .card:hover{
-transform:scale(1.05);
-background:rgba(0,0,0,0.75);
+transform:translateY(-10px) scale(1.03);
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,211,73,0.4);
 }
 
 .card h3{
@@ -458,6 +470,32 @@ function closeModal(){
 document.getElementById("modal").style.display="none";
 
 }
+
+
+/* ANIMACION TARJETAS */
+
+const cards = document.querySelectorAll(".card");
+
+function revealCards(){
+
+let trigger = window.innerHeight * 0.85;
+
+cards.forEach(card => {
+
+let cardTop = card.getBoundingClientRect().top;
+
+if(cardTop < trigger){
+
+card.classList.add("show");
+
+}
+
+});
+
+}
+
+window.addEventListener("scroll",revealCards);
+window.addEventListener("load",revealCards);
 
 </script>
 
