@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,29 +24,30 @@ background:black;
 
 nav{
 position:fixed;
-top:0;
 width:100%;
+top:0;
+left:0;
+background:rgba(0,0,0,0.7);
+padding:15px 40px;
 display:flex;
-justify-content:center;
-gap:40px;
-padding:20px;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(10px);
+justify-content:space-between;
+align-items:center;
 z-index:1000;
 }
 
+nav ul{
+list-style:none;
+display:flex;
+gap:25px;
+}
+
 nav a{
-color:white;
 text-decoration:none;
-font-size:16px;
-letter-spacing:1px;
+color:white;
+font-weight:bold;
 }
 
-nav a:hover{
-color:#d4af37;
-}
-
-/* SECTIONS */
+/* SECCIONES */
 
 section{
 min-height:100vh;
@@ -55,163 +55,105 @@ display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:80px 10%;
+padding:80px 20px;
 position:relative;
-background-size:cover;
-background-position:center;
 }
 
-/* overlay */
+/* OVERLAY OSCURO */
 
-section::before{
-content:"";
+.overlay{
 position:absolute;
 top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.55);
+background:rgba(0,0,0,0.65);
+z-index:1;
 }
 
-section *{
+.content{
 position:relative;
 z-index:2;
+max-width:1000px;
 }
 
-/* HERO */
+/* FONDOS */
 
-.hero{
-background-image:url("images/inicio.jpg");
-flex-direction:column;
+#inicio{
+background:url("images/hero.jpg") center/cover no-repeat;
 }
 
-.hero h1{
+#experiencias{
+background:url("images/experiencias.jpg") center/cover no-repeat;
+}
+
+#servicios{
+background:url("images/servicios.jpg") center/cover no-repeat;
+}
+
+#reservar{
+background:url("images/reservar.jpg") center/cover no-repeat;
+}
+
+/* TITULOS */
+
+h1{
 font-size:60px;
 margin-bottom:20px;
 }
 
-.hero p{
-font-size:22px;
+h2{
+font-size:45px;
 margin-bottom:40px;
 }
 
-.cta{
-padding:15px 35px;
-background:#d4af37;
+/* BOTONES */
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:14px 30px;
+background:#D4AF37;
 color:black;
-font-weight:bold;
 text-decoration:none;
-border-radius:3px;
+font-weight:bold;
+border:none;
+transition:0.3s;
 }
 
-.cta:hover{
+.btn:hover{
 background:white;
 }
 
-/* EXPERIENCIAS */
+/* TARJETAS SERVICIOS */
 
-.experiencias{
-background-image:url("images/experiencias.jpg");
-flex-direction:column;
-}
-
-.experiencias h2{
-font-size:42px;
-margin-bottom:20px;
-}
-
-.experiencias p{
-max-width:700px;
-font-size:18px;
-line-height:1.6;
-}
-
-/* SERVICIOS */
-
-.servicios{
-background-image:url("images/servicios.jpg");
-flex-direction:column;
-}
-
-.servicios h2{
-font-size:42px;
-margin-bottom:60px;
-}
-
-.cards{
+.services{
 display:flex;
-gap:40px;
+gap:30px;
 flex-wrap:wrap;
 justify-content:center;
 }
 
 .card{
-width:300px;
-padding:40px;
+background:rgba(255,255,255,0.08);
 border:1px solid rgba(255,255,255,0.2);
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(8px);
-transition:0.3s;
+padding:40px 25px;
+width:300px;
+backdrop-filter:blur(5px);
+transition:0.4s;
 }
 
 .card:hover{
 transform:translateY(-10px);
-border-color:#d4af37;
 }
 
 .card h3{
 margin-bottom:15px;
-font-size:22px;
+font-size:24px;
 }
 
 .card p{
-margin-bottom:25px;
-line-height:1.5;
-}
-
-/* BOTON SERVICIOS */
-
-.card a{
-display:inline-block;
-padding:12px 30px;
-border:2px solid #d4af37;
-color:white;
-text-decoration:none;
-transition:0.3s;
-}
-
-.card a:hover{
-background:#d4af37;
-color:black;
-}
-
-/* RESERVA */
-
-.reserva{
-background-image:url("images/reserva.jpg");
-flex-direction:column;
-}
-
-.reserva h2{
-font-size:42px;
 margin-bottom:20px;
-}
-
-.reserva p{
-margin-bottom:30px;
-font-size:18px;
-}
-
-.reserva a{
-padding:15px 35px;
-background:#d4af37;
-color:black;
-text-decoration:none;
-font-weight:bold;
-}
-
-.reserva a:hover{
-background:white;
 }
 
 </style>
@@ -219,44 +161,54 @@ background:white;
 
 <body>
 
+<!-- NAV -->
+
 <nav>
 
-<a href="#inicio">Inicio</a>
-<a href="#experiencias">Experiencias</a>
-<a href="#servicios">Servicios</a>
-<a href="galeria.html">Galería</a>
-<a href="#reserva">Reservar</a>
+<div><strong>DC Cocktail Experience</strong></div>
+
+<ul>
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#experiencias">Experiencias</a></li>
+<li><a href="#servicios">Servicios</a></li>
+<li><a href="#reservar">Reservar</a></li>
+<li><a href="galeria.html">Galería</a></li>
+</ul>
 
 </nav>
 
-
 <!-- HERO -->
 
-<section id="inicio" class="hero">
+<section id="inicio">
+
+<div class="overlay"></div>
+
+<div class="content">
 
 <h1>DC Cocktail Experience</h1>
 
-<p>Coctelería premium para eventos inolvidables</p>
+<p>Experiencias de coctelería premium para eventos inolvidables.</p>
 
-<a class="cta" href="#reserva">Reserva tu experiencia</a>
+<a class="btn" href="#servicios">Descubre más</a>
+
+</div>
 
 </section>
 
-
 <!-- EXPERIENCIAS -->
 
-<section id="experiencias" class="experiencias">
+<section id="experiencias">
 
-<div>
+<div class="overlay"></div>
+
+<div class="content">
 
 <h2>Experiencias</h2>
 
 <p>
 
-Cada evento es una oportunidad para crear algo único.  
-Diseñamos experiencias de coctelería que combinan técnica,
-presentación y hospitalidad para convertir cualquier ocasión
-en un momento memorable.
+Creamos experiencias de coctelería únicas donde cada detalle importa.  
+Desde eventos íntimos hasta grandes celebraciones, llevamos el arte del cocktail a otro nivel.
 
 </p>
 
@@ -264,50 +216,53 @@ en un momento memorable.
 
 </section>
 
-
 <!-- SERVICIOS -->
 
-<section id="servicios" class="servicios">
+<section id="servicios">
+
+<div class="overlay"></div>
+
+<div class="content">
 
 <h2>Nuestros Servicios</h2>
 
-<div class="cards">
+<div class="services">
+
+<!-- BODAS -->
 
 <div class="card">
 
 <h3>Bodas</h3>
 
-<p>
-Experiencias elegantes diseñadas para celebraciones inolvidables.
-</p>
+<p>Experiencias elegantes diseñadas para celebraciones inolvidables.</p>
 
-<a href="images/bodas.jpg">Explorar</a>
+<a class="btn" href="images/bodas.jpg" target="_blank">Explorar</a>
 
 </div>
 
+<!-- PRIVADOS -->
 
 <div class="card">
 
 <h3>Eventos Privados</h3>
 
-<p>
-Eventos exclusivos con cócteles personalizados.
-</p>
+<p>Eventos exclusivos con cócteles personalizados.</p>
 
-<a href="images/privado.jpg">Explorar</a>
+<a class="btn" href="images/privado.jpg" target="_blank">Explorar</a>
 
 </div>
 
+<!-- CORPORATIVOS -->
 
 <div class="card">
 
 <h3>Eventos Corporativos</h3>
 
-<p>
-Experiencias profesionales para empresas y marcas.
-</p>
+<p>Experiencias profesionales para empresas y marcas.</p>
 
-<a href="images/corporativo.jpg">Explorar</a>
+<a class="btn" href="images/corporativo.jpg" target="_blank">Explorar</a>
+
+</div>
 
 </div>
 
@@ -315,25 +270,31 @@ Experiencias profesionales para empresas y marcas.
 
 </section>
 
+<!-- RESERVAR -->
 
-<!-- RESERVA -->
+<section id="reservar">
 
-<section id="reserva" class="reserva">
+<div class="overlay"></div>
+
+<div class="content">
 
 <h2>Reserva tu Experiencia</h2>
 
 <p>
-Transforma tu evento en una experiencia de coctelería única.
+
+Haz de tu evento algo inolvidable con DC Cocktail Experience.
+
 </p>
 
-<a href="https://linktr.ee/dccocktailexperience" target="_blank">
+<a class="btn" href="https://linktr.ee/dccocktailexperience" target="_blank">
 
-Reservar ahora
+Reservar Ahora
 
 </a>
+
+</div>
 
 </section>
 
 </body>
-
 </html>
