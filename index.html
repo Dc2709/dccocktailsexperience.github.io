@@ -2,7 +2,6 @@
 <html lang="es">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,310 +13,252 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: Arial, sans-serif;
+font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-background:#0a0a0a;
 color:white;
-overflow-x:hidden;
+background:black;
 }
 
-/* NAVBAR */
+/* NAV */
 
-.navbar{
+nav{
 position:fixed;
 top:0;
 width:100%;
 display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
-z-index:999;
-transition:0.4s;
-}
-
-.navbar.scrolled{
-background:rgba(0,0,0,0.85);
-backdrop-filter:blur(6px);
-}
-
-.nav-links a{
-margin-left:40px;
-text-decoration:none;
-color:#eaeaea;
-font-size:18px;
-transition:0.3s;
-}
-
-.nav-links a:hover{
-color:#ffd349;
-}
-
-/* HERO */
-
-.hero{
-height:100vh;
-background:url("images/hero.jpg") center/cover no-repeat;
-display:flex;
 justify-content:center;
-align-items:center;
-text-align:center;
-position:relative;
+gap:40px;
+padding:20px;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
+z-index:1000;
 }
 
-.overlay{
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.65);
-}
-
-.hero-content{
-position:relative;
-z-index:2;
-animation:fadeUp 1.8s ease;
-}
-
-.logo{
-width:120px;
-margin-bottom:20px;
-}
-
-.hero h1{
-font-size:70px;
-letter-spacing:3px;
-}
-
-.hero p{
-font-size:24px;
-color:#ffd349;
-margin:20px 0 40px;
-}
-
-/* BOTONES */
-
-.btn{
-padding:14px 40px;
-border:2px solid #ffd349;
+nav a{
 color:white;
 text-decoration:none;
-font-size:18px;
-transition:0.4s;
-cursor:pointer;
+font-size:16px;
+letter-spacing:1px;
 }
 
-.btn:hover{
-background:#ffd349;
-color:black;
+nav a:hover{
+color:#d4af37;
 }
 
-/* SECCIONES */
+/* SECTIONS */
 
-.section{
-padding:120px 10%;
+section{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
 text-align:center;
+padding:80px 10%;
 position:relative;
 background-size:cover;
 background-position:center;
 }
 
-.section-overlay{
+/* overlay */
+
+section::before{
+content:"";
 position:absolute;
 top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.75);
+background:rgba(0,0,0,0.55);
 }
 
-.section-content{
+section *{
 position:relative;
 z-index:2;
 }
 
-.section h2{
-font-size:45px;
+/* HERO */
+
+.hero{
+background-image:url("images/inicio.jpg");
+flex-direction:column;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
 margin-bottom:40px;
+}
+
+.cta{
+padding:15px 35px;
+background:#d4af37;
+color:black;
+font-weight:bold;
+text-decoration:none;
+border-radius:3px;
+}
+
+.cta:hover{
+background:white;
 }
 
 /* EXPERIENCIAS */
 
 .experiencias{
-background:url("images/experiencias.jpg") center/cover no-repeat;
+background-image:url("images/experiencias.jpg");
+flex-direction:column;
+}
+
+.experiencias h2{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.experiencias p{
+max-width:700px;
+font-size:18px;
+line-height:1.6;
 }
 
 /* SERVICIOS */
 
 .servicios{
-background:url("images/servicios.jpg") center/cover no-repeat;
+background-image:url("images/servicios.jpg");
+flex-direction:column;
 }
 
-.services{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
-margin-top:40px;
+.servicios h2{
+font-size:42px;
+margin-bottom:60px;
+}
+
+.cards{
+display:flex;
+gap:40px;
+flex-wrap:wrap;
+justify-content:center;
 }
 
 .card{
-background:rgba(255,255,255,0.05);
+width:300px;
 padding:40px;
-border:1px solid rgba(255,255,255,0.1);
-transition:0.4s;
+border:1px solid rgba(255,255,255,0.2);
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(8px);
+transition:0.3s;
 }
 
 .card:hover{
-transform:scale(1.05);
-background:rgba(255,255,255,0.1);
+transform:translateY(-10px);
+border-color:#d4af37;
 }
 
 .card h3{
-margin-bottom:20px;
+margin-bottom:15px;
+font-size:22px;
 }
 
 .card p{
-color:#ccc;
+margin-bottom:25px;
+line-height:1.5;
+}
+
+/* BOTON SERVICIOS */
+
+.card a{
+display:inline-block;
+padding:12px 30px;
+border:2px solid #d4af37;
+color:white;
+text-decoration:none;
+transition:0.3s;
+}
+
+.card a:hover{
+background:#d4af37;
+color:black;
+}
+
+/* RESERVA */
+
+.reserva{
+background-image:url("images/reserva.jpg");
+flex-direction:column;
+}
+
+.reserva h2{
+font-size:42px;
 margin-bottom:20px;
 }
 
-/* RESERVAR */
-
-.reservar{
-background:url("images/reservar.jpg") center/cover no-repeat;
+.reserva p{
+margin-bottom:30px;
+font-size:18px;
 }
 
-.reserve-text{
-max-width:600px;
-margin:auto;
+.reserva a{
+padding:15px 35px;
+background:#d4af37;
+color:black;
+text-decoration:none;
+font-weight:bold;
 }
 
-/* MODAL IMAGEN */
-
-.modal{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.95);
-justify-content:center;
-align-items:center;
-z-index:9999;
-}
-
-.modal img{
-max-width:80%;
-max-height:80%;
-}
-
-.close{
-position:absolute;
-top:40px;
-right:60px;
-font-size:40px;
-cursor:pointer;
-}
-
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:40px;
-color:#777;
-background:#000;
-}
-
-/* ANIMACION */
-
-@keyframes fadeUp{
-
-0%{
-opacity:0;
-transform:translateY(40px);
-}
-
-100%{
-opacity:1;
-transform:translateY(0);
-}
-
-}
-
-/* RESPONSIVE */
-
-@media(max-width:900px){
-
-.services{
-grid-template-columns:1fr;
-}
-
-.hero h1{
-font-size:42px;
-}
-
+.reserva a:hover{
+background:white;
 }
 
 </style>
-
 </head>
-
 
 <body>
 
-
-<!-- NAVBAR -->
-
-<div class="navbar" id="navbar">
-
-<div><strong>DC Cocktail</strong></div>
-
-<div class="nav-links">
+<nav>
 
 <a href="#inicio">Inicio</a>
 <a href="#experiencias">Experiencias</a>
 <a href="#servicios">Servicios</a>
-<a href="#reservar">Reservar</a>
-<a href="menu.html">Menú</a>
+<a href="galeria.html">Galería</a>
+<a href="#reserva">Reservar</a>
 
-</div>
-
-</div>
+</nav>
 
 
 <!-- HERO -->
 
-<section class="hero" id="inicio">
-
-<div class="overlay"></div>
-
-<div class="hero-content">
-
-<img src="images/logocopa.png" class="logo">
+<section id="inicio" class="hero">
 
 <h1>DC Cocktail Experience</h1>
 
-<p>Mobile Cocktail Bar | Private Events</p>
+<p>Coctelería premium para eventos inolvidables</p>
 
-<a href="menu.html" class="btn">Ver Menú</a>
-
-</div>
+<a class="cta" href="#reserva">Reserva tu experiencia</a>
 
 </section>
 
 
 <!-- EXPERIENCIAS -->
 
-<section class="section experiencias" id="experiencias">
+<section id="experiencias" class="experiencias">
 
-<div class="section-overlay"></div>
-
-<div class="section-content">
+<div>
 
 <h2>Experiencias</h2>
 
-<a href="galeria.html" class="btn">Ver Galería</a>
+<p>
+
+Cada evento es una oportunidad para crear algo único.  
+Diseñamos experiencias de coctelería que combinan técnica,
+presentación y hospitalidad para convertir cualquier ocasión
+en un momento memorable.
+
+</p>
 
 </div>
 
@@ -326,45 +267,47 @@ font-size:42px;
 
 <!-- SERVICIOS -->
 
-<section class="section servicios" id="servicios">
-
-<div class="section-overlay"></div>
-
-<div class="section-content">
+<section id="servicios" class="servicios">
 
 <h2>Nuestros Servicios</h2>
 
-<div class="services">
+<div class="cards">
 
 <div class="card">
 
 <h3>Bodas</h3>
 
-<p>Experiencias elegantes diseñadas para celebraciones inolvidables.</p>
+<p>
+Experiencias elegantes diseñadas para celebraciones inolvidables.
+</p>
 
-<button class="btn" onclick="openModal('images/bodas.jpg')">Explorar</button>
+<a href="images/bodas.jpg">Explorar</a>
 
 </div>
+
 
 <div class="card">
 
 <h3>Eventos Privados</h3>
 
-<p>Eventos exclusivos con cócteles personalizados.</p>
+<p>
+Eventos exclusivos con cócteles personalizados.
+</p>
 
-<button class="btn" onclick="openModal('images/privado.jpg')">Explorar</button>
+<a href="images/privado.jpg">Explorar</a>
 
 </div>
+
 
 <div class="card">
 
 <h3>Eventos Corporativos</h3>
 
-<p>Experiencias profesionales para empresas y marcas.</p>
+<p>
+Experiencias profesionales para empresas y marcas.
+</p>
 
-<button class="btn" onclick="openModal('images/corporativo.jpg')">Explorar</button>
-
-</div>
+<a href="images/corporativo.jpg">Explorar</a>
 
 </div>
 
@@ -373,89 +316,24 @@ font-size:42px;
 </section>
 
 
-<!-- RESERVAR -->
+<!-- RESERVA -->
 
-<section class="section reservar" id="reservar">
+<section id="reserva" class="reserva">
 
-<div class="section-overlay"></div>
+<h2>Reserva tu Experiencia</h2>
 
-<div class="section-content">
+<p>
+Transforma tu evento en una experiencia de coctelería única.
+</p>
 
-<div class="reserve-text">
+<a href="https://linktr.ee/dccocktailexperience" target="_blank">
 
-<h2>Contáctanos y diseñemos juntos una experiencia única</h2>
-
-<p>Creamos cócteles personalizados, una barra elegante y un servicio profesional para tu evento.</p>
-
-<a href="https://linktr.ee/dccocktailexperience" target="_blank" class="btn">
-
-Reserva tu experiencia
+Reservar ahora
 
 </a>
 
-</div>
-
-</div>
-
 </section>
 
-
-<!-- MODAL IMAGEN -->
-
-<div class="modal" id="modal">
-
-<span class="close" onclick="closeModal()">✕</span>
-
-<img id="modal-img">
-
-</div>
-
-
-<footer>
-
-DC Cocktail Experience © 2026
-
-</footer>
-
-
-<script>
-
-/* NAVBAR SCROLL */
-
-window.addEventListener("scroll",function(){
-
-let navbar = document.getElementById("navbar");
-
-if(window.scrollY > 50){
-
-navbar.classList.add("scrolled");
-
-}else{
-
-navbar.classList.remove("scrolled");
-
-}
-
-});
-
-
-/* MODAL */
-
-function openModal(src){
-
-document.getElementById("modal").style.display="flex";
-document.getElementById("modal-img").src=src;
-
-}
-
-function closeModal(){
-
-document.getElementById("modal").style.display="none";
-
-}
-
-</script>
-
-
 </body>
+
 </html>
