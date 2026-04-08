@@ -68,7 +68,7 @@ z-index:1001;
 .menu-toggle span{
 width:28px;
 height:3px;
-background:white;
+background:#ffd349;
 transition:0.4s;
 }
 
@@ -236,6 +236,7 @@ background:url("images/reservar.jpg") center/cover no-repeat;
 .reserve-text{
 max-width:700px;
 margin:auto;
+padding:20px;
 }
 
 .reserve-text h2{
@@ -244,7 +245,7 @@ margin-bottom:30px;
 
 .reserve-text p{
 margin-bottom:40px;
-line-height:1.6;
+line-height:1.7;
 }
 
 /* MODAL */
@@ -295,12 +296,24 @@ background:#000;
 
 @media(max-width:900px){
 
+.navbar{
+padding:20px 25px;
+}
+
 .services{
 grid-template-columns:1fr;
 }
 
 .hero h1{
 font-size:42px;
+}
+
+.hero p{
+font-size:20px;
+}
+
+.section{
+padding:100px 8%;
 }
 
 /* NAVBAR MOBILE */
@@ -366,9 +379,11 @@ display:flex;
 <!-- HERO -->
 
 <section class="hero" id="inicio">
+
 <div class="overlay"></div>
 
 <div class="hero-content">
+
 <img src="images/logocopa.png" class="logo">
 
 <h1>DC Cocktail Experience</h1>
@@ -378,22 +393,31 @@ display:flex;
 <a href="menu.html" class="btn">Ver Menú</a>
 
 </div>
+
 </section>
 
 <!-- EXPERIENCIAS -->
 
 <section class="section experiencias" id="experiencias">
+
 <div class="section-overlay"></div>
+
 <div class="section-content">
+
 <h2>Experiencias</h2>
+
 <a href="galeria.html" class="btn">Ver Galería</a>
+
 </div>
+
 </section>
 
 <!-- SERVICIOS -->
 
 <section class="section servicios" id="servicios">
+
 <div class="section-overlay"></div>
+
 <div class="section-content">
 
 <h2>Nuestros Servicios</h2>
@@ -419,14 +443,19 @@ display:flex;
 </div>
 
 </div>
+
 </div>
+
 </section>
 
 <!-- RESERVAR -->
 
 <section class="section reservar" id="reservar">
+
 <div class="section-overlay"></div>
+
 <div class="section-content">
+
 <div class="reserve-text">
 
 <h2>Contáctanos y diseñemos juntos una experiencia única</h2>
@@ -434,22 +463,31 @@ display:flex;
 <p>Creamos cócteles personalizados, una barra elegante y un servicio profesional para tu evento.</p>
 
 <a href="https://linktr.ee/dccocktailexperience" target="_blank" class="btn">
+
 Reserva tu experiencia
+
 </a>
 
 </div>
+
 </div>
+
 </section>
 
 <!-- MODAL -->
 
 <div class="modal" id="modal">
+
 <span class="close" onclick="closeModal()">✕</span>
+
 <img id="modal-img">
+
 </div>
 
 <footer>
+
 DC Cocktail Experience © 2026
+
 </footer>
 
 <script>
